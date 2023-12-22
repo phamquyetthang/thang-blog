@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[957],{2647:e=>{e.exports=JSON.parse('[{"label":"javascript","permalink":"/thang-blog/blog/tags/javascript","count":1},{"label":"nodejs","permalink":"/thang-blog/blog/tags/nodejs","count":1}]')}}]);
