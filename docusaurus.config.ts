@@ -1,42 +1,42 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: 'Blog của Thắng',
-  tagline: 'Blog của Thắng - Code đủ thứ',
-  favicon: 'img/favicon.ico',
+  title: "Blog của Thắng",
+  tagline: "Blog của Thắng - Code đủ thứ",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://phamquyetthang.github.io',
+  url: "https://phamquyetthang.github.io",
   customFields: {
     // Put your custom environment here
-    teamEmail: 'quyetthang.phucchi@gmail.com',
+    teamEmail: "quyetthang.phucchi@gmail.com",
   },
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'phamquyetthang', // Usually your GitHub org/user name.
-  projectName: 'thang-blog', // Usually your repo name.
+  organizationName: "phamquyetthang", // Usually your GitHub org/user name.
+  projectName: "thang-blog", // Usually your repo name.
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'vi',
-    locales: ['vi'],
+    defaultLocale: "vi",
+    locales: ["vi"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         // docs: {
         //   sidebarPath: './sidebars.ts',
@@ -54,7 +54,7 @@ const config: Config = {
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -62,12 +62,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/codeduthu.jpg',
+    image: "img/codeduthu.jpg",
     navbar: {
-      title: 'Code Đủ Thứ',
+      title: "Code Đủ Thứ",
       logo: {
-        alt: 'Code Đủ Thứ Logo',
-        src: 'img/codeduthu.jpg',
+        alt: "Code Đủ Thứ Logo",
+        src: "img/codeduthu.jpg",
       },
       items: [
         // {
@@ -76,16 +76,16 @@ const config: Config = {
         //   position: 'left',
         //   label: 'Tutorial',
         // },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: "/blog", label: "Blog", position: "left" },
         {
-          href: 'https://github.com/phamquyetthang',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/phamquyetthang",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         // {
         //   title: 'Docs',
@@ -97,29 +97,34 @@ const config: Config = {
         //   ],
         // },
         {
-          title: 'My networks',
+          title: "My networks",
           items: [
             {
-              label: 'Youtube',
-              href: 'https://www.youtube.com/channel/UCvh5_f6mJzVOthh42uojXbg',
+              label: "Youtube",
+              href: "https://www.youtube.com/channel/UCvh5_f6mJzVOthh42uojXbg",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: "Blog",
+              to: "/blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/phamquyetthang',
+              label: "GitHub",
+              href: "https://github.com/phamquyetthang",
             },
+          ],
+        },
+        {
+          title: "Buy me a coffee",
+          items: [
             {
-              label: 'Donate',
-              to: '/donate',
-            }
+              label: "Donate",
+              to: "/donate",
+            },
           ],
         },
       ],
