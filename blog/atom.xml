@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://phamquyetthang.github.io/blog</id>
+    <title>Blog của Thắng Blog</title>
+    <updated>2023-12-22T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://phamquyetthang.github.io/blog"/>
+    <subtitle>Blog của Thắng Blog</subtitle>
+    <icon>https://phamquyetthang.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Làm cách nào để sửa đổi thư viện trong node module]]></title>
+        <id>https://phamquyetthang.github.io/blog/lam-cach-nao-de-sua-doi-thu-vien-trong-node-module</id>
+        <link href="https://phamquyetthang.github.io/blog/lam-cach-nao-de-sua-doi-thu-vien-trong-node-module"/>
+        <updated>2023-12-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Một vài cách để fix lỗi trong node_module ( dùng patch-package, ... )]]></summary>
+        <content type="html"><![CDATA[<p>Một vài cách để fix lỗi trong node_module ( dùng patch-package, ... )</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-khi-cần-fix-thư-viện-từ-npm">1. Khi cần fix thư viện từ npm:<a href="https://phamquyetthang.github.io/blog/lam-cach-nao-de-sua-doi-thu-vien-trong-node-module#1-khi-c%E1%BA%A7n-fix-th%C6%B0-vi%E1%BB%87n-t%E1%BB%AB-npm" class="hash-link" aria-label="Đường dẫn trực tiếp tới 1. Khi cần fix thư viện từ npm:" title="Đường dẫn trực tiếp tới 1. Khi cần fix thư viện từ npm:">​</a></h2>
+<p>Đối với các anh em người chơi hệ js , thì chắc đều không lạ lẫm gì với việc cài đặt các thư viện của bên thứ ba qua câu lệnh
+<code>npm install &lt;package name&gt;</code> ( hoặc yarn )</p>
+<p>Các thư viện này sau khi được cài đặt sẽ nằm trong node module và tôi và các bạn chỉ việc lấy ra sử dụng.</p>
+<p><img loading="lazy" src="https://images.viblo.asia/35468773-2fcb-4363-8ac0-52a6a00f2f07.jpg" alt="" class="img_ev3q"></p>
+<p>Những gì có trong node_module chúng ta không cần thiết phải biết gồm những gì.</p>
+<p>Node_module có khi còn là vùng cấm không ai muốn đụng vào.</p>
+<p>Xóa node_module và cài lại cũng là 1 trong những giải pháp tâm linh chắc chắn bạn từng sử dụng để fix bug trong tuyệt vong.</p>
+<p>Vấn đề phát sinh khi chúng ta phát hiện 1 issues của thư viện không như chúng ta mong muốn nhưng không muốn tìm thư viện khác để thay thế.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vậy-làm-cách-nào-để-tự-mình-sửa-thư-viện-và-không-bị-mất-đi-nếu-xóa-node_module">Vậy làm cách nào để tự mình sửa thư viện và không bị mất đi nếu xóa node_module<a href="https://phamquyetthang.github.io/blog/lam-cach-nao-de-sua-doi-thu-vien-trong-node-module#v%E1%BA%ADy-l%C3%A0m-c%C3%A1ch-n%C3%A0o-%C4%91%E1%BB%83-t%E1%BB%B1-m%C3%ACnh-s%E1%BB%ADa-th%C6%B0-vi%E1%BB%87n-v%C3%A0-kh%C3%B4ng-b%E1%BB%8B-m%E1%BA%A5t-%C4%91i-n%E1%BA%BFu-x%C3%B3a-node_module" class="hash-link" aria-label="Đường dẫn trực tiếp tới Vậy làm cách nào để tự mình sửa thư viện và không bị mất đi nếu xóa node_module" title="Đường dẫn trực tiếp tới Vậy làm cách nào để tự mình sửa thư viện và không bị mất đi nếu xóa node_module">​</a></h3>
+<p>Chúng ta có những cách sau đây:</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2các-cách-sửa-thư-viện-trong-node_modules">2.Các cách sửa thư viện trong node_modules<a href="https://phamquyetthang.github.io/blog/lam-cach-nao-de-sua-doi-thu-vien-trong-node-module#2c%C3%A1c-c%C3%A1ch-s%E1%BB%ADa-th%C6%B0-vi%E1%BB%87n-trong-node_modules" class="hash-link" aria-label="Đường dẫn trực tiếp tới 2.Các cách sửa thư viện trong node_modules" title="Đường dẫn trực tiếp tới 2.Các cách sửa thư viện trong node_modules">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cách-1-fork-repo-của-package">Cách 1: Fork repo của package<a href="https://phamquyetthang.github.io/blog/lam-cach-nao-de-sua-doi-thu-vien-trong-node-module#c%C3%A1ch-1-fork-repo-c%E1%BB%A7a-package" class="hash-link" aria-label="Đường dẫn trực tiếp tới Cách 1: Fork repo của package" title="Đường dẫn trực tiếp tới Cách 1: Fork repo của package">​</a></h3>
+<p>Bạn có thể vào source code của package đó, fork về git của mình một bản , sửa đổi nó sau đó sửa.</p>
+<p>Sau đó khai báo nó vào trong package.json:
+Ví dụ như này
+<img loading="lazy" src="https://images.viblo.asia/072ae723-f94b-4da3-9802-17bd928bfb57.png" alt="image.png" class="img_ev3q"></p>
+<p>Thay số phiên bản của package bằng đường dẫn đến repo của bạn theo dạng <code>git+{repo}</code></p>
+<p>Đến đây bạn có thể sẽ gặp một số vấn đề nếu cố sửa đổi các package siêu to khổng lồ như mấy cái của facebook, có vài package lại là thư mục con của 1 package khác.</p>
+<p>Bạn có thể vào trang <a href="https://gitpkg.vercel.app/" target="_blank" rel="noopener noreferrer">https://gitpkg.vercel.app/</a> , dán đường link trực tiếp đến thư mục chứa package đó . Trang web này sẽ render cho bạn 1 đường link và cả câu lệnh yarn ( npm ).</p>
+<p>(Lý thuyết là thế, nhưng nó có chạy hay không thì, ..., để chắc kèo thì mọi người có thể chơi cách 2 )</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cách-2-sử-dụng-patch-package">Cách 2: Sử dụng patch-package<a href="https://phamquyetthang.github.io/blog/lam-cach-nao-de-sua-doi-thu-vien-trong-node-module#c%C3%A1ch-2-s%E1%BB%AD-d%E1%BB%A5ng-patch-package" class="hash-link" aria-label="Đường dẫn trực tiếp tới Cách 2: Sử dụng patch-package" title="Đường dẫn trực tiếp tới Cách 2: Sử dụng patch-package">​</a></h3>
+<p>Cách này trực tiếp hơn cách thứ nhất,</p>
+<p>Bạn cứ mạnh dạn tìm đến chỗ code trong node_module bạn định sửa và mạnh dạn sửa nó.</p>
+<p>Sau đó chạy câu lệnh:</p>
+<p><code> npx patch-package &lt;package name&gt;</code></p>
+<p>patch-package sau đó sẽ tạo một thư mục patches, khai báo về các thay đổi của bạn.</p>
+<p>Bạn có thể push folder này lên git và chạy lệnh <code>npx patch-package</code> để render lại những thay đổi của bạn.</p>
+<p>Để đỡ mất một bước mỗi khi install lại project, bạn có thể thêm dòng <code>"postinstall": "npx patch-package"</code> vào script như thế này để node_module tự render theo thay đổi của bạn mỗi khi install lại .</p>
+<p><img loading="lazy" src="https://images.viblo.asia/ef048d12-b117-4597-8e6e-3de033978daa.png" alt="image.png" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-demo">3. Demo:<a href="https://phamquyetthang.github.io/blog/lam-cach-nao-de-sua-doi-thu-vien-trong-node-module#3-demo" class="hash-link" aria-label="Đường dẫn trực tiếp tới 3. Demo:" title="Đường dẫn trực tiếp tới 3. Demo:">​</a></h2>
+<p>Mình có một demo nho nhỏ .</p>
+<p>Đó là đổi cái cái logo mặc định của thằng metro trong REACT-NATIVE,
+sau 1 hồi lục lọi mình phát hiện ra cái đống ấy viết ở một file tên TerminalReporter.js trong /node_modules/metro/src/lib</p>
+<p>Tưởng là sẽ có mấy hàm thuật toán loằng ngoằng để in ra như hồi học C++ ở trường, nhưng không, nó chỉ là cái mảng chứ từng dòng dấu #### một :)))))
+Thế thì dễ rồi, mình cứ thế mà đổi lại thôi.</p>
+<p>Từ:</p>
+<p><img loading="lazy" src="https://images.viblo.asia/6dffe6ba-b46f-43a1-a235-d30d12bf7cfa.png" alt="image.png" class="img_ev3q"></p>
+<p>Thành:</p>
+<p><img loading="lazy" src="https://images.viblo.asia/adef09a3-5890-477a-92af-7c5c4dbc7118.png" alt="image.png" class="img_ev3q"></p>
+<p>( Mình làm trong những ngày deadline dí tận cổ, bận quá nên mình quyết định nằm nghịch hết 1 ngày cho đỡ khủng hoảng, nghịch xong stress hơn )</p>]]></content>
+        <author>
+            <name>Phạm Quyết Thắng</name>
+            <uri>https://github.com/phamquyetthang</uri>
+        </author>
+        <category label="javascript" term="javascript"/>
+        <category label="nodejs" term="nodejs"/>
+    </entry>
+</feed>
