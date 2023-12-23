@@ -1,10 +1,10 @@
 ---
 title: "Hello World!" trong 20 Ngôn Ngữ Lập Trình Phổ Biến
+description: "Hello, World!" Python | "Hello, World!" Java | "Hello, World!" C++ | "Hello, World!" PHP | "Hello, World!" Javascript | "Hello, World!" C# 
 slug: hello-world-trong-20-ngon-ngu-lap-trinh-pho-bien
 authors: thang
 tags: [fun-code, hello world]
 hide_table_of_contents: false
-description: "Hello, World!" Python | "Hello, World!" Java | "Hello, World!" C++ | "Hello, World!" PHP | "Hello, World!" Javascript | "Hello, World!" C# 
 ---
 <!-- truncate -->
 
