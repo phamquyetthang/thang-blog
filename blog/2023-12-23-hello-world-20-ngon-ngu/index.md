@@ -4,6 +4,7 @@ description: Hello World Python | Hello World Java | Hello World C++ | Hello Wor
 slug: hello-world-trong-20-ngon-ngu-lap-trinh-pho-bien
 authors: thang
 tags: [fun-code, hello world]
+image: ./hello.png
 hide_table_of_contents: false
 ---
 <!-- truncate -->
