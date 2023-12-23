@@ -1,10 +1,10 @@
 ---
 title: "Hello World!" trong 20 Ngôn Ngữ Lập Trình Phổ Biến
-description: [Chắc hẳn ai trong chúng ta cũng đã từng bắt đầu học lập trình bằng chương trình "Hello, World!". Đây là một bước nhỏ nhưng quan trọng, giúp bạn làm quen với cú pháp cơ bản của một ngôn ngữ lập trình mới. Trong bài viết này, chúng ta sẽ xem "Hello, World!" được viết như thế nào trong 20 ngôn ngữ lập trình phổ biến.]
 slug: hello-world-trong-20-ngon-ngu-lap-trinh-pho-bien
 authors: thang
 tags: [fun-code, hello world]
 hide_table_of_contents: false
+description: "Hello, World!" Python | "Hello, World!" Java | "Hello, World!" C++ | "Hello, World!" PHP | "Hello, World!" Javascript | "Hello, World!" C# 
 ---
 <!-- truncate -->
 
