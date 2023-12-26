@@ -69,6 +69,16 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/codeduthu.jpg",
+    metadata: [
+      {
+        name: 'keywords',
+        content: 'coding, blog, js, react, js blog, dev blog'
+      },
+      {
+        name: 'google-adsense-account',
+        content: 'ca-pub-7099570900840464'
+      }
+    ],
     navbar: {
       title: "Code Đủ Thứ",
       logo: {
