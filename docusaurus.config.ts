@@ -71,6 +71,10 @@ const config: Config = {
     image: "img/codeduthu.jpg",
     metadata: [
       {
+        name: 'description',
+        content: 'Blog về lập trình của Thắng, javascript, godot và mọi thứ xung quanh'
+      },
+      {
         name: 'keywords',
         content: 'coding, blog, js, react, js blog, dev blog'
       },
