@@ -129,7 +129,7 @@ const config: Config = {
         //   label: 'Tutorial',
         // },
         { to: "/blog", label: "Blog", position: "left" },
-        { to: "/poem", label: "Lượn vượn vườn thơ", position: "left" },
+        { to: "/poem", label: "Lượn vượn vườn thơ 🌻", position: "left" },
         { to: "/donate", label: "Buy me a coffee", position: "right" },
         {
           href: "https://github.com/phamquyetthang",
