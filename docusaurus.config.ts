@@ -48,10 +48,11 @@ const config: Config = {
         docs: false,
         blog: {
           showReadingTime: true,
-          blogSidebarTitle: 'All posts',
-          blogSidebarCount: 'ALL',
-          blogTitle: 'Blog của Thắng - Code đủ thứ',
-          blogDescription: 'Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh'
+          blogSidebarTitle: "All posts",
+          blogSidebarCount: "ALL",
+          blogTitle: "Blog của Thắng - Code đủ thứ",
+          blogDescription:
+            "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -61,43 +62,54 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         gtag: {
-          trackingID: 'G-7Y4H6WLK3Z',
+          trackingID: "G-7Y4H6WLK3Z",
           anonymizeIP: true,
         },
       } satisfies Preset.Options,
     ],
   ],
-
+  plugins: [
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "poem",
+        routeBasePath: "poem",
+        path: "./poem",
+      },
+    ],
+  ],
   themeConfig: {
     // Replace with your project's social card
     image: "img/codeduthu.jpg",
     metadata: [
       {
-        name: 'description',
-        content: 'Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh'
+        name: "description",
+        content:
+          "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
       },
       {
         name: 'keywords',
-        content: 'code đủ thứ, coding, blog, js, react, js blog, dev blog'
+        content: 'code đủ thứ, coding, blog, js, react, js blog, dev blog, lượn vượn vườn thơ'
       },
       {
-        name: 'google-adsense-account',
-        content: 'ca-pub-7099570900840464'
-      }
+        name: "google-adsense-account",
+        content: "ca-pub-7099570900840464",
+      },
     ],
     headTags: [
       {
-        tagName: 'script',
+        tagName: "script",
         attributes: {
-          type: 'application/ld+json',
+          type: "application/ld+json",
         },
         innerHTML: JSON.stringify({
-          '@context': 'https://schema.org/',
-          '@type': 'Organization',
-          name: 'Blog của Thắng - Code đủ thứ',
-          url: 'https://tutiplaylab.io.vn',
-          logo: 'https://tutiplaylab.io.vn/img/codeduthu.jpg',
-          description: 'Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh'
+          "@context": "https://schema.org/",
+          "@type": "Organization",
+          name: "Blog của Thắng - Code đủ thứ",
+          url: "https://tutiplaylab.io.vn",
+          logo: "https://tutiplaylab.io.vn/img/codeduthu.jpg",
+          description:
+            "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
         }),
       },
     ],
@@ -115,6 +127,7 @@ const config: Config = {
         //   label: 'Tutorial',
         // },
         { to: "/blog", label: "Blog", position: "left" },
+        { to: "/poem", label: "Lượn vượn vườn thơ", position: "left" },
         { to: "/donate", label: "Buy me a coffee", position: "right" },
         {
           href: "https://github.com/phamquyetthang",
@@ -175,7 +188,7 @@ const config: Config = {
     },
     customFields: {
       description:
-        'Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh',
+        "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
     },
   } satisfies Preset.ThemeConfig,
 };
