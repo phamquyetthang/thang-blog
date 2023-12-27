@@ -4,20 +4,47 @@
  */
 
 .heroBanner {
-  padding: 16rem 0;
+  padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.aboutMeSection {
+  background-color: var(--ifm-color-emphasis-100);
+}
+.aboutMe {
+  padding: 4rem 0;
+  margin: auto;
+  width: fit-content;
+}
+
+.myAvatar {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.aboutMeDesc {
+  max-width: 600px;
+}
+
+@media screen and (max-width: 996px) {
+  .aboutMe {
+    justify-content: center;
+  }
+
+  .aboutMeDesc {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .heroBanner {
+    padding: 2rem;
+  }
 }

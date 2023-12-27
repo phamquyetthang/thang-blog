@@ -1,51 +1,48 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  image: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Đặng Anh Sơn",
+    image: require("@site/static/img/son.jpg").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        "Trên một con đường nhỏ <br />
+        Dưới một ánh chiều vàng <br />
+        Trọng lực ghim đầu bút <br />
+        Nhặt những dòng ngổn ngang,"
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Lượn vượn vườn thơ",
+    image: require("@site/static/img/sieg.jpg").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Cộng đồng những bạn trẻ yêu thơ. Những gì chúng mình viết lại không phải
+        là những bài thơ để đời, chỉ đơn giản là những dòng cảm xúc bất chợt đến
+        và đi, 
+        <br />
+        <a target="_blank" href="https://www.facebook.com/ape.poem">
+          facebook
+        </a>
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, image, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureSvg} alt={title} src={image} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -55,10 +52,17 @@ function Feature({title, Svg, description}: FeatureItem) {
   );
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepageCollaborators(): JSX.Element {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">Mình không cô đơn</Heading>
+          <h4>
+            Những người bạn tuyệt vời đã cùng mình xây dựng trang web này:
+          </h4>
+        </div>
+
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

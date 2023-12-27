@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "Blog của Thắng",
-  tagline: "Blog của Thắng - Code đủ thứ",
+  title: "Code đủ thứ",
+  tagline: "Code đủ thứ - Blog của code và thơ",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -50,7 +50,7 @@ const config: Config = {
           showReadingTime: true,
           blogSidebarTitle: "All posts",
           blogSidebarCount: "ALL",
-          blogTitle: "Blog của Thắng - Code đủ thứ",
+          blogTitle: "Code đủ thứ - blog về lập trình",
           blogDescription:
             "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
           // Please change this to your repo.
@@ -77,6 +77,11 @@ const config: Config = {
         path: "./poem",
         blogTitle: "Lượn vượn vườn thơ",
         blogDescription: "Lượn vượn vườn thơ",
+        blogSidebarTitle: 'Tất cả',
+        readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+          frontMatter.hide_reading_time
+            ? undefined
+            : defaultReadingTime({ content }),
       },
     ],
   ],
@@ -90,8 +95,9 @@ const config: Config = {
           "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
       },
       {
-        name: 'keywords',
-        content: 'code đủ thứ, coding, blog, js, react, js blog, dev blog, lượn vượn vườn thơ'
+        name: "keywords",
+        content:
+          "code đủ thứ, coding, blog, js, react, js blog, dev blog, lượn vượn vườn thơ",
       },
       {
         name: "google-adsense-account",
@@ -128,7 +134,8 @@ const config: Config = {
         //   position: 'left',
         //   label: 'Tutorial',
         // },
-        { to: "/blog", label: "Blog 📝", position: "left" },
+        { to: "/blog", label: "Blog lập trình 📝", position: "left" },
+        { to: "/blog", label: "Khóa học 🎓", position: "left" },
         { to: "/poem", label: "Lượn vượn vườn thơ 🌻", position: "left" },
         { to: "/donate", label: "Buy me a coffee", position: "right" },
         {
@@ -157,6 +164,10 @@ const config: Config = {
               label: "Youtube",
               href: "https://www.youtube.com/channel/UCvh5_f6mJzVOthh42uojXbg",
             },
+            {
+              label: "Blog",
+              href: "https://tutiplaylab.io.vn",
+            },
           ],
         },
         {
@@ -165,6 +176,10 @@ const config: Config = {
             {
               label: "Blog",
               to: "/blog",
+            },
+            {
+              label: "Lượn vượn vườn thơ",
+              to: "/poem",
             },
             {
               label: "GitHub",
