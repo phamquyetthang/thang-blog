@@ -128,7 +128,7 @@ const config: Config = {
         //   position: 'left',
         //   label: 'Tutorial',
         // },
-        { to: "/blog", label: "Blog ✍🏼", position: "left" },
+        { to: "/blog", label: "Blog 📝", position: "left" },
         { to: "/poem", label: "Lượn vượn vườn thơ 🌻", position: "left" },
         { to: "/donate", label: "Buy me a coffee", position: "right" },
         {
