@@ -78,7 +78,7 @@ const config: Config = {
       },
       {
         name: 'keywords',
-        content: 'coding, blog, js, react, js blog, dev blog'
+        content: 'code đủ thứ, coding, blog, js, react, js blog, dev blog'
       },
       {
         name: 'google-adsense-account',
