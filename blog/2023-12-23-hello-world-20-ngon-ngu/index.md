@@ -3,7 +3,7 @@ title: Hello World trong 20 Ngôn Ngữ Lập Trình Phổ Biến
 description: Hello World Python | Hello World Java | Hello World C++ | Hello World PHP | Hello World Javascript | Hello World C# 
 slug: hello-world-trong-20-ngon-ngu-lap-trinh-pho-bien
 authors: thang
-tags: [fun-code, hello world]
+tags: [fun-code, hello world, typescript, nodejs, nestjs, godot]
 image: https://raw.githubusercontent.com/phamquyetthang/thang-blog/master/blog/2023-12-23-hello-world-20-ngon-ngu/hello.png
 hide_table_of_contents: false
 ---
