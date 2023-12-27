@@ -8,7 +8,7 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://phamquyetthang.github.io",
+  url: "https://tutiplaylab.io.vn",
   customFields: {
     // Put your custom environment here
     teamEmail: "quyetthang.phucchi@gmail.com",
