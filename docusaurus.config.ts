@@ -72,7 +72,7 @@ const config: Config = {
     metadata: [
       {
         name: 'description',
-        content: 'Blog về lập trình của Thắng, javascript, godot và mọi thứ xung quanh'
+        content: 'Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh'
       },
       {
         name: 'keywords',
@@ -82,6 +82,22 @@ const config: Config = {
         name: 'google-adsense-account',
         content: 'ca-pub-7099570900840464'
       }
+    ],
+    headTags: [
+      {
+        tagName: 'script',
+        attributes: {
+          type: 'application/ld+json',
+        },
+        innerHTML: JSON.stringify({
+          '@context': 'https://schema.org/',
+          '@type': 'Organization',
+          name: 'Blog của Thắng - Code đủ thứ',
+          url: 'https://tutiplaylab.io.vn',
+          logo: 'https://tutiplaylab.io.vn/img/codeduthu.jpg',
+          description: 'Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh'
+        }),
+      },
     ],
     navbar: {
       title: "Code Đủ Thứ",
