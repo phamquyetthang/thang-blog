@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://tutiplaylab.io.vn/poem</id>
+    <title>Blog của Thắng Blog</title>
+    <updated>2023-09-17T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://tutiplaylab.io.vn/poem"/>
+    <subtitle>Blog của Thắng Blog</subtitle>
+    <icon>https://tutiplaylab.io.vn/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Tháng 9 - 01]]></title>
+        <id>https://tutiplaylab.io.vn/poem/luon-vuon-vuon-tho-thang09-01</id>
+        <link href="https://tutiplaylab.io.vn/poem/luon-vuon-vuon-tho-thang09-01"/>
+        <updated>2023-09-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Lượn vượn vườn thơ - tháng 9 - 01 Hoa cúc màu vàng\ Trời chẳng có mây\ Anh thì vẫn vậy\ Vẫn chẳng có em]]></summary>
+        <content type="html"><![CDATA[<p>Hoa cúc màu vàng<br>
+<!-- -->Trời chẳng có mây<br>
+<!-- -->Anh thì vẫn vậy<br>
+<!-- -->Vẫn chẳng có em</p>
+<img src="https://tutiplaylab.io.vn/assets/images/17-63715c8f029efaf2cde73a47faf933d2.png" alt="Siamese cat" style="height:300px">]]></content>
+        <author>
+            <name>Sieg</name>
+        </author>
+        <category label="lượn vượn vườn thơ" term="lượn vượn vườn thơ"/>
+        <category label="sieg" term="sieg"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tháng 9 - 02]]></title>
+        <id>https://tutiplaylab.io.vn/poem/luon-vuon-vuon-tho-thang09-02</id>
+        <link href="https://tutiplaylab.io.vn/poem/luon-vuon-vuon-tho-thang09-02"/>
+        <updated>2023-09-11T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Lượn vượn vườn thơ - tháng 9 - 02 Anh nhớ\ Anh nhớ nắng\ Anh nhớ mưa\ Anh nhớ một lúc ban trưa \ Cạnh em\ Anh ăn nem nướng\ Ở đầu Dương Khuê]]></summary>
+        <content type="html"><![CDATA[<p>Anh nhớ<br>
+<!-- -->Anh nhớ nắng<br>
+<!-- -->Anh nhớ mưa<br>
+<!-- -->Anh nhớ một lúc ban trưa <br>
+<!-- -->Cạnh em<br>
+<!-- -->Anh ăn nem nướng<br>
+<!-- -->Ở đầu Dương Khuê<br>
+<!-- -->Anh nhớ<br>
+<!-- -->Anh nhớ đường vòng sát đê<br>
+<!-- -->Đường ngang một chút đi về nhà em<br>
+<!-- -->Anh nhớ buổi tối <br>
+<!-- -->Tối lên đèn<br>
+<!-- -->Nhớ đêm lên phố<br>
+<!-- -->Ăn kem Tràng Tiền<br>
+<!-- -->Anh nhớ<br>
+<!-- -->Nhớ lúc bình yên<br>
+<!-- -->Cạnh em bánh tráng<br>
+<!-- -->Giữa hàng hồ Tây<br>
+<!-- -->Anh nhớ những lúc lên phây<br>
+<!-- -->Anh nhìn, anh thấy<br>
+<!-- -->Rộn ràng cả tim<br>
+<!-- -->Rồi lúc hai đứa xem phim<br>
+<!-- -->Phim xem thì sợ<br>
+<!-- -->Lén nhìn về nhau.</p>
+<img src="https://tutiplaylab.io.vn/assets/images/11-5a01da062f3bfa9d5177e8c61503d041.jpg" alt="Siamese cat" style="height:300px">]]></content>
+        <author>
+            <name>Sieg</name>
+        </author>
+        <category label="lượn vượn vườn thơ" term="lượn vượn vườn thơ"/>
+        <category label="sieg" term="sieg"/>
+    </entry>
+</feed>
