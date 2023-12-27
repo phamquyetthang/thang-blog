@@ -4,10 +4,21 @@
         <title>Blog của Thắng Blog</title>
         <link>https://tutiplaylab.io.vn/poem</link>
         <description>Blog của Thắng Blog</description>
-        <lastBuildDate>Sun, 17 Sep 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 27 Dec 2023 10:47:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>vi</language>
+        <item>
+            <title><![CDATA[Tháng 9 - test]]></title>
+            <link>https://tutiplaylab.io.vn/poem/luon-vuon-vuon-tho-test</link>
+            <guid>https://tutiplaylab.io.vn/poem/luon-vuon-vuon-tho-test</guid>
+            <pubDate>Wed, 27 Dec 2023 10:47:56 GMT</pubDate>
+            <description><![CDATA[có thì tốt]]></description>
+            <content:encoded><![CDATA[<p>Em có nhớ không những chiều vàng nhạt ấy</p>
+<img src="https://tutiplaylab.io.vn/assets/images/17-63715c8f029efaf2cde73a47faf933d2.png" alt="Siamese cat" style="height:300px">]]></content:encoded>
+            <category>lượn vượn vườn thơ</category>
+            <category>sieg</category>
+        </item>
         <item>
             <title><![CDATA[Tháng 9 - 01]]></title>
             <link>https://tutiplaylab.io.vn/poem/luon-vuon-vuon-tho-thang09-01</link>
