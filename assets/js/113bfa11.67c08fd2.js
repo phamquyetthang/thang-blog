@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[1349],{1620:e=>{e.exports=JSON.parse('[{"label":"l\u01b0\u1ee3n v\u01b0\u1ee3n v\u01b0\u1eddn th\u01a1","permalink":"/poem/tags/l\u01b0\u1ee3n-v\u01b0\u1ee3n-v\u01b0\u1eddn-th\u01a1","count":3},{"label":"sieg","permalink":"/poem/tags/sieg","count":3}]')}}]);

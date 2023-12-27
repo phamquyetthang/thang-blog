@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tutiplaylab.io.vn/blog</id>
-    <title>Blog của Thắng Blog</title>
+    <title>Code đủ thứ Blog</title>
     <updated>2023-12-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tutiplaylab.io.vn/blog"/>
-    <subtitle>Blog của Thắng Blog</subtitle>
+    <subtitle>Code đủ thứ Blog</subtitle>
     <icon>https://tutiplaylab.io.vn/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Hello World trong 20 Ngôn Ngữ Lập Trình Phổ Biến]]></title>
@@ -81,6 +81,10 @@
         </author>
         <category label="fun-code" term="fun-code"/>
         <category label="hello world" term="hello world"/>
+        <category label="typescript" term="typescript"/>
+        <category label="nodejs" term="nodejs"/>
+        <category label="nestjs" term="nestjs"/>
+        <category label="godot" term="godot"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[React - Upload ảnh và video trong rich text editor]]></title>
