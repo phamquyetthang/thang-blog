@@ -75,6 +75,8 @@ const config: Config = {
         id: "poem",
         routeBasePath: "poem",
         path: "./poem",
+        blogTitle: "Lượn vượn vườn thơ",
+        blogDescription: "Lượn vượn vườn thơ",
       },
     ],
   ],
