@@ -77,6 +77,7 @@ const config: Config = {
         path: "./poem",
         blogTitle: "Lượn vượn vườn thơ",
         blogDescription: "Lượn vượn vườn thơ",
+        image: 'img/sieg.jpg'
       },
     ],
   ],
