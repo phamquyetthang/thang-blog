@@ -50,6 +50,8 @@ const config: Config = {
           showReadingTime: true,
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
+          blogTitle: 'Blog của Thắng - Code đủ thứ',
+          blogDescription: 'Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh'
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
