@@ -171,6 +171,10 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    customFields: {
+      description:
+        'Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh',
+    },
   } satisfies Preset.ThemeConfig,
 };
 
