@@ -4,10 +4,8 @@ import BlogPostItem from "@theme-original/BlogPostItem";
 import GiscusComponent from "@site/src/components/GiscusComponent";
 
 export default function BlogPostItemWrapper(props) {
-  const { metadata, isBlogPostPage } = useBlogPost();
+  const { isBlogPostPage } = useBlogPost();
 
-  const { frontMatter } = metadata;
-  const { enableComments } = frontMatter;
 
   useEffect(() => {
     const pushAd = () => {
@@ -37,7 +35,7 @@ export default function BlogPostItemWrapper(props) {
   return (
     <>
       <BlogPostItem {...props} />
-      {enableComments && isBlogPostPage && <GiscusComponent />}
+      {isBlogPostPage && <GiscusComponent />}
 
 
       <ins
