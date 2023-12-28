@@ -207,6 +207,12 @@ const config: Config = {
       description:
         "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
     },
+    scripts: [
+      {
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7099570900840464",
+        crossorigin: "anonymous"
+      }
+    ]
   } satisfies Preset.ThemeConfig,
 };
 

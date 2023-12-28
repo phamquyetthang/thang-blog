@@ -6,6 +6,7 @@ authors: thang
 tags: [fun-code, hello world, typescript, nodejs, nestjs, godot]
 image: https://raw.githubusercontent.com/phamquyetthang/thang-blog/master/blog/2023-12-23-hello-world-20-ngon-ngu/hello.png
 hide_table_of_contents: false
+enableComments: true 
 ---
 <!-- truncate -->
 
