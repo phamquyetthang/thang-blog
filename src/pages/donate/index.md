@@ -6,10 +6,3 @@ Nếu bạn thích những bài viết trên blog này và muốn ủng hộ tá
 
 
 ![Momo](./momo.jpg)
-
-
-
-
-
-
-<!-- ![tpbank](./tp.jpg) -->
