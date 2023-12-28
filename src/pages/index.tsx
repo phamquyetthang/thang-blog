@@ -7,6 +7,7 @@ import Tag from "@theme/Tag";
 
 import styles from "./index.module.css";
 import HomepageCollaborators from "../components/HomepageFeatures";
+import GiscusComponent from "../components/GiscusComponent";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -67,6 +68,12 @@ export default function Home(): JSX.Element {
 
         <HomepageCollaborators />
       </main>
+
+      <div className="container">
+        <div>
+          <GiscusComponent />
+        </div>
+      </div>
     </Layout>
   );
 }
