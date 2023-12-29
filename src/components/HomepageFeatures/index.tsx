@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Đặng Anh Sơn",
-    image: require("@site/static/img/son.jpg").default,
+    image: require("@site/static/img/son.webp").default,
     description: (
       <>
         "Trên một con đường nhỏ <br />
@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Lượn vượn vườn thơ",
-    image: require("@site/static/img/sieg.jpg").default,
+    image: require("@site/static/img/sieg.webp").default,
     description: (
       <>
         Cộng đồng những bạn trẻ yêu thơ. Những gì chúng mình viết lại không phải
@@ -42,7 +42,7 @@ function Feature({ title, image, description }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        <img className={styles.featureSvg} alt={title} src={image} />
+        <img className={styles.featureSvg} alt={title} src={image} height={140} width={140} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

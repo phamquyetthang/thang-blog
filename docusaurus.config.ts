@@ -87,7 +87,7 @@ const config: Config = {
   ],
   themeConfig: {
     // Replace with your project's social card
-    image: "img/codeduthu.jpg",
+    image: "img/codeduthu.webp",
     metadata: [
       {
         name: "description",
@@ -115,7 +115,7 @@ const config: Config = {
           "@type": "Organization",
           name: "Blog của Thắng - Code đủ thứ",
           url: "https://tutiplaylab.io.vn",
-          logo: "https://tutiplaylab.io.vn/img/codeduthu.jpg",
+          logo: "https://tutiplaylab.io.vn/img/codeduthu.webp",
           description:
             "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
         }),
@@ -125,7 +125,7 @@ const config: Config = {
       title: "Code Đủ Thứ",
       logo: {
         alt: "Code Đủ Thứ Logo",
-        src: "img/codeduthu.jpg",
+        src: "img/codeduthu.webp",
       },
       items: [
         // {

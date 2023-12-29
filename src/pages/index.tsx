@@ -43,8 +43,9 @@ export default function Home(): JSX.Element {
               <img
                 className={styles.myAvatar}
                 alt="Code đủ thứ"
-                src="img/thang.jpg"
+                src={require("@site/static/img/thang.webp").default}
                 width={120}
+                height={187.33}
               />
               <div className={clsx("padding-horiz--md", styles.aboutMeDesc)}>
                 <Heading as="h3">Phạm Quyết Thắng</Heading>
