@@ -8,11 +8,11 @@
     <subtitle>Code đủ thứ Blog</subtitle>
     <icon>https://tutiplaylab.io.vn/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Bảo mật Swagger Document trong dự án Nodejs và Nestjs]]></title>
+        <title type="html"><![CDATA[Bảo mật Swagger Document trong node và nestjs | Code đủ thứ]]></title>
         <id>https://tutiplaylab.io.vn/blog/express-basic-auth-swagger-doc</id>
         <link href="https://tutiplaylab.io.vn/blog/express-basic-auth-swagger-doc"/>
         <updated>2023-12-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Bảo mật Swagger API Document với express-basic-auth trong dự án Nodejs và Nestjs. Swagger là một công cụ mạnh mẽ để tạo và quản lý API documentation. Tuy nhiên, việc bảo mật Swagger document là một yếu tố quan trọng]]></summary>
+        <summary type="html"><![CDATA[Bảo mật Swagger Document trong dự án Nodejs và Nestjs - Trong bài viết này mình sẽ hướng dẫn bạn bảo mật API Swagger document trong Nodejs và Nestjs]]></summary>
         <content type="html"><![CDATA[<p>Swagger là một công cụ mạnh mẽ để tạo và quản lý API documentation. Tuy nhiên, việc bảo mật Swagger document là một yếu tố quan trọng để đảm bảo rằng thông tin nhạy cảm không bị lộ ra ngoài. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng thư viện express-basic-auth để bảo vệ trang Swagger document trong dự án JavaScript và TypeScript. Chúng ta sẽ tập trung vào hai trường hợp: một dự án sử dụng JavaScript/TypeScript thông thường và một dự án NestJS với @nestjs/swagger.</p>
 <p>Sau khi hoàn thành, một form yêu cầu nhập user/password sẽ hiện ra khi vào trang document và bắt buộc phải nhập đúng tài khoản để có thể xem document:</p>
 <img src="https://tutiplaylab.io.vn/assets/images/basic-auth-1-2942a553395050bd1dafffcabb9f5e40.png" alt="Basic auth" style="height:300px">
