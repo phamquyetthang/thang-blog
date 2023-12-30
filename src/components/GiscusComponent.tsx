@@ -11,7 +11,7 @@ export default function GiscusComponent() {
       repoId="R_kgDOK8jsrw"
       category="General"
       categoryId="DIC_kwDOK8jsr84CcCw2" 
-      mapping="url"
+      mapping="pathname"
       term="Hi, please login by github to join the comments"
       strict="0"
       reactionsEnabled="1"
