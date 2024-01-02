@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[7425],{820:e=>{e.exports=JSON.parse('{"label":"TonyVu","permalink":"/poem/tags/tony-vu","allTagsPath":"/poem/tags","count":1,"unlisted":false}')}}]);

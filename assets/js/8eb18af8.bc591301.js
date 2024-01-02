@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[9534],{84002:e=>{e.exports=JSON.parse('{"label":"PQT_otod","permalink":"/poem/tags/pqt-otod","allTagsPath":"/poem/tags","count":2,"unlisted":false}')}}]);

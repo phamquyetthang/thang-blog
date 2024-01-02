@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[9414],{99948:e=>{e.exports=JSON.parse('{"label":"nguyenmanhcuong","permalink":"/poem/tags/nguyenmanhcuong","allTagsPath":"/poem/tags","count":4,"unlisted":false}')}}]);

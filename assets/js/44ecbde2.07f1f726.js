@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[7586],{98262:e=>{e.exports=JSON.parse('{"label":"lannu","permalink":"/poem/tags/lannu","allTagsPath":"/poem/tags","count":1,"unlisted":false}')}}]);

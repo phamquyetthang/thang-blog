@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[8493],{40827:e=>{e.exports=JSON.parse('{"label":"toan","permalink":"/poem/tags/toan","allTagsPath":"/poem/tags","count":1,"unlisted":false}')}}]);

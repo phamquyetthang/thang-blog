@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[5963],{93095:e=>{e.exports=JSON.parse('{"permalink":"/poem","page":1,"postsPerPage":10,"totalPages":15,"totalCount":145,"nextPage":"/poem/page/2","blogDescription":"L\u01b0\u1ee3n v\u01b0\u1ee3n v\u01b0\u1eddn th\u01a1","blogTitle":"L\u01b0\u1ee3n v\u01b0\u1ee3n v\u01b0\u1eddn th\u01a1"}')}}]);

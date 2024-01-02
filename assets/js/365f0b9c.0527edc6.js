@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2375],{55999:e=>{e.exports=JSON.parse('{"label":"buivanbao","permalink":"/poem/tags/buivanbao","allTagsPath":"/poem/tags","count":2,"unlisted":false}')}}]);
