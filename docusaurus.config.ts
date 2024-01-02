@@ -78,6 +78,7 @@ const config: Config = {
         blogTitle: "Lượn vượn vườn thơ",
         blogDescription: "Lượn vượn vườn thơ",
         blogSidebarTitle: 'Tất cả',
+        blogSidebarCount: "ALL",
         readingTime: ({ content, frontMatter, defaultReadingTime }) =>
           frontMatter.hide_reading_time
             ? undefined
