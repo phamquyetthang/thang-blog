@@ -114,8 +114,8 @@ const config: Config = {
           "@context": "https://schema.org/",
           "@type": "Organization",
           name: "Blog của Thắng - Code đủ thứ",
-          url: "https://tutiplaylab.io.vn",
-          logo: "https://tutiplaylab.io.vn/img/codeduthu.webp",
+          url: "https://codeduthu.com",
+          logo: "https://codeduthu.com/img/codeduthu.webp",
           description:
             "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
         }),
@@ -166,7 +166,7 @@ const config: Config = {
             },
             {
               label: "Blog",
-              href: "https://tutiplaylab.io.vn",
+              href: "https://codeduthu.com",
             },
           ],
         },
