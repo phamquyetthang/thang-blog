@@ -15,7 +15,7 @@ function generateMDX(jsonData) {
     const mdxContent = `---
 title: ${item.description.split('\n').slice(0, 1).join(' ')}
 description: Lượn vượn vườn thơ - tháng ${moment(item.time, 'MM/DD/YYYY HH:mm').format('MM')}-${t+ 1} ${item.description.split('\n').slice(0, 2).join(' ').replaceAll('\n', ' ').replaceAll('  ', ' ')}
-slug: luon-vuon-vuon-tho-thang-${moment(item.time, 'MM/DD/YYYY HH:mm').format('MM')}-${new Date().getTime()}
+slug: luon-vuon-vuon-tho-thang-${moment(item.time, 'MM/DD/YYYY HH:mm').format('MM')}-${Math.floor(100000 + Math.random() * 900000)}
 authors: ${item.author.replace('#', '').toLowerCase().includes('pqt') ? 'thang': item.author.replace('#', '')}
 tags: [${item.page.replace(/ /g, '-').toLowerCase()}, ${item.author.replace('#', '')}, thang${moment(item.time, 'MM/DD/YYYY HH:mm').format('MM')}]
 image: ${item.thumbnail}
