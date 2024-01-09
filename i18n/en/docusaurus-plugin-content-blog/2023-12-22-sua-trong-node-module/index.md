@@ -1,81 +1,81 @@
 ---
-title: Làm cách nào để sửa đổi thư viện trong node module
-description: Một vài cách để fix lỗi trong node_module và lưu lại chỉnh sửa đó ( dùng patch-package, ... )
+title: How to modify library in node module and save it forever
+description: Ways to Fix Errors in node_modules and Preserve Edits (Using patch-package, ...)
 slug: lam-cach-nao-de-sua-doi-thu-vien-trong-node-module
 authors: [thang]
 tags: [javascript, nodejs]
 image: https://images.viblo.asia/35468773-2fcb-4363-8ac0-52a6a00f2f07.jpg
 hide_table_of_contents: false
 ---
+Ways to Fix Errors in node_modules and Preserve Edits (Using patch-package, ...)
+## 1. When Fixing a Library from npm:
+For JavaScript enthusiasts, installing third-party libraries using the command `npm install <package name>` (or yarn) is a familiar routine.
 
-Một vài cách để fix lỗi trong node_module và lưu lại chỉnh sửa đó ( dùng patch-package, ... )
-## 1. Khi cần fix thư viện từ npm:
-Đối với các anh em người chơi hệ js , thì chắc đều không lạ lẫm gì với việc cài đặt các thư viện của bên thứ ba qua câu lệnh 
-`npm install <package name>` ( hoặc yarn )
-
-Các thư viện này sau khi được cài đặt sẽ nằm trong node module và tôi và các bạn chỉ việc lấy ra sử dụng.
+After installation, these libraries reside in the node_modules directory, and we can easily use them.
 
 ![](./35468773-2fcb-4363-8ac0-52a6a00f2f07.jpg)
 
-Những gì có trong node_module chúng ta không cần thiết phải biết gồm những gì.
+What's inside the node_module is usually not something we need to know in detail. The node_module can sometimes be an untouchable area.
 
-Node_module có khi còn là vùng cấm không ai muốn đụng vào.
+Deleting the node_module and reinstalling is a spiritual solution many have used in desperation to fix bugs.
 
-Xóa node_module và cài lại cũng là 1 trong những giải pháp tâm linh chắc chắn bạn từng sử dụng để fix bug trong tuyệt vong.
+Issues arise when we encounter a problem with a library but don't want to find an alternative.
 
-Vấn đề phát sinh khi chúng ta phát hiện 1 issues của thư viện không như chúng ta mong muốn nhưng không muốn tìm thư viện khác để thay thế.
 <!-- truncate -->
-### Vậy làm cách nào để tự mình sửa thư viện và không bị mất đi nếu xóa node_module 
+### So, how can we fix libraries ourselves without losing changes if we delete the node_module?
 
-Chúng ta có những cách sau đây:
+Here are some approaches:
 
-## 2.Các cách sửa thư viện trong node_modules
-### Cách 1: Fork repo của package
-Bạn có thể vào source code của package đó, fork về git của mình một bản , sửa đổi nó sau đó sửa.
+## 2. Ways to Fix Libraries in node_modules
+### Approach 1: Fork the Package's Repo
+You can go to the source code of the package, fork it to your own Git repository, make changes, and then edit it.
 
-Sau đó khai báo nó vào trong package.json:
-Ví dụ như này 
+Afterward, declare it in your package.json like this:
+For example:
 ![image.png](./072ae723-f94b-4da3-9802-17bd928bfb57.png)
 
-Thay số phiên bản của package bằng đường dẫn đến repo của bạn theo dạng `git+{repo}`
+Replace the package version with the path to your repository in the format `git+{repo}`.
 
-Đến đây bạn có thể sẽ gặp một số vấn đề nếu cố sửa đổi các package siêu to khổng lồ như mấy cái của facebook, có vài package lại là thư mục con của 1 package khác.
+You may encounter some issues if you try to modify mega-packages like those from Facebook. Some packages are subdirectories of others.
 
-Bạn có thể vào trang https://gitpkg.vercel.app/ , dán đường link trực tiếp đến thư mục chứa package đó . Trang web này sẽ render cho bạn 1 đường link và cả câu lệnh yarn ( npm ).
+You can go to https://gitpkg.vercel.app/, paste the link directly to the directory containing that package. The website will render a link and yarn (npm) command for you.
 
-(Lý thuyết là thế, nhưng nó có chạy hay không thì, ..., để chắc kèo thì mọi người có thể chơi cách 2 )
-### Cách 2: Sử dụng patch-package
-Cách này trực tiếp hơn cách thứ nhất, 
+(That's the theory, but whether it runs or not... To be sure, you can try approach 2.)
 
-Bạn cứ mạnh dạn tìm đến chỗ code trong node_module bạn định sửa và mạnh dạn sửa nó.
+### Approach 2: Use patch-package
+This approach is more direct than the first one.
 
-Sau đó chạy câu lệnh: 
+Boldly find the code in your node_module that you want to edit and bravely make the changes.
 
-` npx patch-package <package name>`
+Then run the command:
 
-patch-package sau đó sẽ tạo một thư mục patches, khai báo về các thay đổi của bạn. 
+`npx patch-package <package name>`
 
-Bạn có thể push folder này lên git và chạy lệnh `npx patch-package` để render lại những thay đổi của bạn.
+patch-package will create a patches folder, declaring your changes.
 
-Để đỡ mất một bước mỗi khi install lại project, bạn có thể thêm dòng `"postinstall": "npx patch-package"` vào script như thế này để node_module tự render theo thay đổi của bạn mỗi khi install lại .
+You can push this folder to Git and run the `npx patch-package` command to reapply your changes.
+
+To avoid one step each time you reinstall the project, you can add the line `"postinstall": "npx patch-package"` to the scripts like this to let node_module automatically render your changes every time you reinstall.
 
 ![image.png](./ef048d12-b117-4597-8e6e-3de033978daa.png)
 
 ## 3. Demo:
-Mình có một demo nho nhỏ .
+I have a small demo.
 
-Đó là đổi cái cái logo mặc định của thằng metro trong REACT-NATIVE,
-sau 1 hồi lục lọi mình phát hiện ra cái đống ấy viết ở một file tên TerminalReporter.js trong /node_modules/metro/src/lib
+It involves changing the default logo of the metro in REACT-NATIVE.
 
-Tưởng là sẽ có mấy hàm thuật toán loằng ngoằng để in ra như hồi học C++ ở trường, nhưng không, nó chỉ là cái mảng chứ từng dòng dấu #### một :))))) 
-Thế thì dễ rồi, mình cứ thế mà đổi lại thôi.
+After some investigation, I found out it was written in a file named TerminalReporter.js in /node_modules/metro/src/lib.
 
-Từ:
+I thought there would be some complicated algorithms to print it out, like the C++ days at school, but no, it's just an array containing each line of #### :)))))
+
+So, I just changed it.
+
+From:
 
 ![image.png](./6dffe6ba-b46f-43a1-a235-d30d12bf7cfa.png)
 
-Thành: 
+To:
 
 ![image.png](./adef09a3-5890-477a-92af-7c5c4dbc7118.png)
 
-( Mình làm trong những ngày deadline dí tận cổ, bận quá nên mình quyết định nằm nghịch hết 1 ngày cho đỡ khủng hoảng, nghịch xong stress hơn )
+(I did it during the deadline days, too busy, so I decided to spend a day messing around to relieve stress after finishing.)

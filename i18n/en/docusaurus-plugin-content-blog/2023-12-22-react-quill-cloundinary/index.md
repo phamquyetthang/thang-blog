@@ -1,29 +1,29 @@
 ---
-title: React - Upload ảnh và video trong rich text editor
-description: Hướng dẫn sử dụng react-quill để làm richtext editor ( WYSIWYG ) và tích hợp Cloudinary để lưu trữ ảnh trong bài viết
+title: React - Uploading Images and Videos in React Quill using Cloudinary
+description: Guide on using react-quill to create a rich text editor (WYSIWYG) and integrating Cloudinary for image storage in posts
 slug: react-upload-anh-va-video-trong-rich-text-editor
 authors: [thang]
 tags: [react, javascript, nodejs]
 hide_table_of_contents: false
 ---
 
-# Hướng dẫn Upload ảnh và video trong React Quill sử dụng Cloudinary
-### 1.Giới thiệu:
-Trong quá trình phát triển ứng dụng web hoặc trang blog, việc cung cấp một trình soạn thảo phong phú cho người dùng là một nhu cầu phổ biến. Điều này cho phép người dùng tạo, chỉnh sửa và định dạng nội dung của họ một cách linh hoạt và dễ dàng. Một trong những trình soạn thảo phổ biến trong cộng đồng lập trình là React Quill, với khả năng tùy chỉnh cao và dễ tích hợp vào dự án React của bạn.
+# Uploading Images and Videos in React Quill using Cloudinary
+### 1.Introduction:
+In the process of developing web applications or blogs, providing a rich text editor for users is a common requirement. This allows users to create, edit, and format their content flexibly and easily. One popular text editor in the programming community is React Quill, known for its high customization and easy integration into your React projects.
 
-Tuy nhiên, việc cho phép người dùng tải lên và chèn hình ảnh, video vào trình soạn thảo không phải là điều đơn giản. Đặc biệt khi bạn cần lưu trữ và quản lý hàng ngàn tệp đa phương tiện. Giải pháp là sử dụng dịch vụ lưu trữ hình ảnh đám mây mạnh mẽ như Cloudinary. Cloudinary cho phép bạn lưu trữ, tải lên, và quản lý hình ảnh, video một cách hiệu quả, giúp ứng dụng của bạn tăng cường tính năng và hiệu suất.
+However, allowing users to upload and insert images or videos into the text editor is not a simple task. Especially when you need to store and manage thousands of multimedia files. The solution is to use a powerful cloud image storage service like Cloudinary. Cloudinary allows you to store, upload, and manage images and videos efficiently, enhancing the functionality and performance of your application.
 
-Trong bài viết này, chúng ta sẽ tìm hiểu cách tích hợp React Quill với dịch vụ lưu trữ hình ảnh Cloudinary để giải quyết vấn đề phức tạp này. Chúng ta sẽ cùng nhau xây dựng một trình soạn thảo cho phép người dùng tải lên và chèn hình ảnh, video một cách thuận tiện và nhanh chóng.
+In this article, we will learn how to integrate React Quill with the Cloudinary image storage service to address this complex issue. Together, we will build an editor that enables users to conveniently and quickly upload and insert images and videos.
 
-* React Quill: Là một trình soạn thảo mã nguồn mở cho phép người dùng tạo, chỉnh sửa nội dung với định dạng đa dạng.
-* Cloudinary: Dịch vụ lưu trữ đám mây mạnh mẽ hỗ trợ quản lý, tải lên, xử lý hình ảnh và video một cách dễ dàng.
+* React Quill: An open-source text editor that allows users to create and edit content with various formats.
+* Cloudinary: A powerful cloud storage service that supports easy management, uploading, and processing of images and videos.
 <!-- truncate -->
-### 2. Cài đặt react-quill
-* Đầu tiên chúng ta cần khởi tạo project react bằng vite hoặc create-react-app
+### 2. Installing react-quill
+* First, we need to initialize a React project using Vite or create-react-app.
 ```
 yarn create vite react-quill-upload --template react-ts
 ```
-* Cài đặt react-quill :
+* Install react-quill:
 ```
 yarn add react-quill
 ```
@@ -40,7 +40,7 @@ function MyComponent() {
   return <ReactQuill ref={reactQuillRef} theme="snow" value={value} onChange={setValue} />;
 }
 ```
-* Để upload image trong quill editor, chúng ta cần khai báo image vào phần module và formats
+* To upload images in the quill editor, declare the image in the modules and formats section.
 ```
 <ReactQuill
       ref={reactQuillRef}
@@ -88,14 +88,14 @@ function MyComponent() {
       onChange={onChange}
     />
 ```
-* Lúc này bạn sẽ thấy icon upload image trên thanh công cụ của react-quill. Hãy import thử và in giá trị của toàn bộ văn bản ra, bạn sẽ thấy rằng mặc định react-quill sẽ lưu ảnh của bạn dưới dạng base-64:
+* Now you will see the upload image icon on the toolbar of react-quill. Import and print the entire text content, and you will see that by default, react-quill saves your image as base-64:
 ![image.png](./1.webp)
 
-> => nếu sử dụng theo cách mặc định này, chúng ta hoàn toàn có thể lưu trữ ảnh trong database dưới dạng base 64, trong demo mình chỉ sử dụng ảnh với kích thước nhỏ, nếu ảnh càng lớn string base-64 sẽ càng lớn, như thế sẽ rất tốn bộ nhớ.
+> => If using this default approach, we can store the image in the database as base-64. In the demo, I only use small-sized images. If the image size is larger, the base-64 string will be larger, consuming more memory.
 
 ### 3. Handle upload image
-* Để đỡ phải lưu chữ hình ảnh trong đoạn văn bản dưới dạng base-64, chúng ta cần tích hợp một clould service và chỉ cần lưu lại đường link của ảnh đó.Tiếp theo đây mình sẽ hướng dẫn các bạn handle hành động upload của react-quill và sử dụng cloudinary để lưu trữ nó ( các bạn có thể làm tương tự với một cloud bất kỳ nào khác, ví dụ firebase storage, ... )
-* Thêm imageHandler
+* To avoid storing images in the text content as base-64, we need to integrate a cloud service and only store the image's link. Next, I will guide you on handling the upload action of react-quill and using Cloudinary to store it (you can do the same with any other cloud, e.g., Firebase Storage, ...).
+* Add the imageHandler
 ```
  <ReactQuill
       ref={reactQuillRef}
@@ -135,9 +135,9 @@ function MyComponent() {
     };
   }, []);
 ```
-> Giải thích : Ở đoạn code bên trên, mình viết thêm một hàm để handle container image của react-quill. Trong function imageHandler mình tạo ra một thẻ input file và gọi hàng click() để mở ra cửa sổ import file. Các bạn hoàn toàn có thể mở rộng phần này để mở lên upload widget của cloudinary ( [đọc thêm](https://cloudinary.com/documentation/react_image_and_video_upload) ). **Upload với widget sẽ bảo mật và tối ưu hơn do chúng ta có thể tái sử dụng những ảnh đã upload trước đó, nếu có thời gian và cần thiết, các bạn nên dùng cách đó !**
-* Function upload image lên cloudinary:
-Có nhiều cách upload lên cloudinary, nhưng mình chọn cách dùng cách gọi api vì nó đơn giản nhất:
+> Explanation: In the code above, I added a function to handle the image container of react-quill. In the imageHandler function, I create an input file element and trigger a click() to open the file import window. You can extend this part to open the cloudinary upload widget ( [read more](https://cloudinary.com/documentation/react_image_and_video_upload) ). **Using the widget is more secure and efficient because we can reuse previously uploaded images. If you have time and need, you should use that method!**
+* Function to upload the image to Cloudinary:
+There are many ways to upload to Cloudinary, but I choose the simplest method of calling the API:
 ```
 const uploadToCloudinary = async (file: File): Promise<string> => {
   const formData = new FormData();
@@ -158,9 +158,9 @@ const uploadToCloudinary = async (file: File): Promise<string> => {
   return url
 }
 ```
-> Giải thích: để upload ảnh lên cloudinary bằng api, các bạn cần có Product Name và upload_preset, các bạn có thể lấy từ trang setting của cloudinary ( bạn cần để mode của upload_preset là Unsigned, nếu muốn cách bảo mật hơn các bạn có thể dùng các cách upload khác của cloudinary )
+> Explanation: To upload an image to Cloudinary via the API, you need the Product Name and upload_preset, which you can obtain from the cloudinary settings page (set the upload_preset mode to Unsigned for simplicity; for enhanced security, you can use other cloudinary upload methods).
 ![image.png](./2.webp)
-* Insert image url trả về từ cloudinary vào nội dung của đoạn văn bản
+* Insert the image URL returned from Cloudinary into the text content.
 ```
   const imageHandler = useCallback(() => {
     const input = document.createElement("input");
@@ -180,24 +180,24 @@ const uploadToCloudinary = async (file: File): Promise<string> => {
     };
   }, []);
 ```
-> Giải thích: Sau khi có được url từ việc upload lên cloudinary, chúng ta cần gán nó vào đúng vị trí của thẻ img tương ứng trong đoạn văn bản:
+> Explanation: After obtaining the URL from uploading to Cloudinary, we need to assign it to the correct position of the corresponding img tag in the text content:
  ```
 const range = quill.getEditorSelection();
  range && quill.getEditor().insertEmbed(range.index, "image", url);
 ```
-> Phần này chính là để xác định vị trí của thẻ img và gán nó với url trả về từ cloudinary ( trước đó hãy dùng useRef để tham chiếu đến ReactQuill component )
+> This part is to determine the position of the img tag and assign it with the URL returned from Cloudinary (before this, use useRef to reference the ReactQuill component).
 
-* Và đây là kết quả, lúc này nội dung văn bản chỉ còn chứa đường link của ảnh thay vì base-64:
+* And here is the result, now the text content only contains the link of the image instead of base-64:
 ![image.png](./3.webp)
 
-Toàn bộ source code có thể xem ở: https://github.com/phamquyetthang/react-quill-image-upload
+You can find the entire source code at: https://github.com/phamquyetthang/react-quill-image-upload
 
 
-### 4. Kết luận
-Trên đây là hướng dẫn đơn giản của mình để handle việc upload hình ảnh trong react-quill, các bạn có thể làm điều tương tự với việc upload video!
+### 4. Conclusion
+This is my simple guide on handling image uploads in react-quill; you can do something similar with video uploads!
 
-Các bạn có thể xem toàn bộ code của phần hướng dẫn trên trong github của mình: https://github.com/phamquyetthang/react-quill-image-upload
+You can view the entire code of this tutorial on my GitHub: https://github.com/phamquyetthang/react-quill-image-upload
 
-Hy vọng bài viết này hữu ích với bạn. Cảm ơn bạn đã đọc!
+I hope this article is helpful to you. Thank you for reading!
 
-Nếu có bất kỳ câu hỏi hoặc ý kiến gì, hãy để lại bình luận bên dưới. Chúng ta có thể cùng nhau thảo luận về chủ đề này.
+If you have any questions or comments, please leave them below.
