@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Lượn vượn vườn thơ",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Lượn vượn vườn thơ",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Tất cả",
+    "description": "The label for the left sidebar"
+  }
+}

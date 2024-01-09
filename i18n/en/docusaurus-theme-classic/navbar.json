@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "Code Đủ Thứ",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Code Đủ Thứ Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Blog lập trình 📝": {
+    "message": "Blog 📝",
+    "description": "Navbar item with label Blog lập trình 📝"
+  },
+  "item.label.Khóa học 🎓": {
+    "message": "Courses 🎓",
+    "description": "Navbar item with label Khóa học 🎓"
+  },
+  "item.label.Lượn vượn vườn thơ 🌻": {
+    "message": "Lượn vượn vườn thơ 🌻",
+    "description": "Navbar item with label Lượn vượn vườn thơ 🌻"
+  },
+  "item.label.Buy me a coffee": {
+    "message": "Buy me a coffee",
+    "description": "Navbar item with label Buy me a coffee"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}
