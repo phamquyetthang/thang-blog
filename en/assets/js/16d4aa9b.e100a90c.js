@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[7076],{81448:e=>{e.exports=JSON.parse('{"label":"sieg#pqt","permalink":"/en/poem/tags/sieg-pqt","allTagsPath":"/en/poem/tags","count":3,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[1598],{55856:e=>{e.exports=JSON.parse('{"label":"minhtrieu","permalink":"/en/poem/tags/minhtrieu","allTagsPath":"/en/poem/tags","count":1,"unlisted":false}')}}]);

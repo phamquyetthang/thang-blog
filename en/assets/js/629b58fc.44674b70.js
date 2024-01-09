@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[9854],{31801:e=>{e.exports=JSON.parse('{"label":"huynh","permalink":"/en/poem/tags/huynh","allTagsPath":"/en/poem/tags","count":2,"unlisted":false}')}}]);

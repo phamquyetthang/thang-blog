@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[7631],{57962:e=>{e.exports=JSON.parse('{"label":"halinh","permalink":"/en/poem/tags/halinh","allTagsPath":"/en/poem/tags","count":1,"unlisted":false}')}}]);

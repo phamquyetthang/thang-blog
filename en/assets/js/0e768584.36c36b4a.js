@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2109],{58482:e=>{e.exports=JSON.parse('{"label":"react","permalink":"/en/blog/tags/react","allTagsPath":"/en/blog/tags","count":1,"unlisted":false}')}}]);

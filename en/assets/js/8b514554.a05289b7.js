@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[6059],{75366:e=>{e.exports=JSON.parse('{"label":"vietthanh","permalink":"/en/poem/tags/vietthanh","allTagsPath":"/en/poem/tags","count":3,"unlisted":false}')}}]);

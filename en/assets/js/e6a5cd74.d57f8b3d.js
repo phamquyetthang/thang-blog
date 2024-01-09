@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[1317],{53941:e=>{e.exports=JSON.parse('{"label":"hocita","permalink":"/en/poem/tags/hocita","allTagsPath":"/en/poem/tags","count":5,"unlisted":false}')}}]);

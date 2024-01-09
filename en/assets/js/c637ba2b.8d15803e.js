@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[435],{1752:e=>{e.exports=JSON.parse('{"label":"thang12","permalink":"/en/poem/tags/thang-12","allTagsPath":"/en/poem/tags","count":13,"unlisted":false}')}}]);

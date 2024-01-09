@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2357],{94466:e=>{e.exports=JSON.parse('{"label":"thanhnguyen","permalink":"/en/poem/tags/thanhnguyen","allTagsPath":"/en/poem/tags","count":2,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[7991],{89675:e=>{e.exports=JSON.parse('{"label":"buitrangsi","permalink":"/en/poem/tags/buitrangsi","allTagsPath":"/en/poem/tags","count":1,"unlisted":false}')}}]);

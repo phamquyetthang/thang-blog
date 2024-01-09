@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[1826],{76343:e=>{e.exports=JSON.parse('{"label":"thaovyzoey","permalink":"/en/poem/tags/thaovyzoey","allTagsPath":"/en/poem/tags","count":1,"unlisted":false}')}}]);

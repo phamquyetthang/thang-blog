@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[155],{61171:e=>{e.exports=JSON.parse('{"label":"buiduyphuong","permalink":"/en/poem/tags/buiduyphuong","allTagsPath":"/en/poem/tags","count":3,"unlisted":false}')}}]);
