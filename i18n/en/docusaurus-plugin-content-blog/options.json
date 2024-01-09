@@ -1,14 +1,14 @@
 {
   "title": {
     "message": "Code đủ thứ - blog về lập trình",
-    "description": "The title for the blog used in SEO"
+    "description": "Code du thu - Blog about javascript, nodejs, godot 4"
   },
   "description": {
     "message": "Blog về lập trình của Thắng - Code đủ thứ, javascript, godot và mọi thứ xung quanh",
-    "description": "The description for the blog used in SEO"
+    "description": "Pham Quyet Thang - Code đủ thứ, javascript, godot và mọi thứ xung quanh,  Blog about javascript, nodejs, godot 4"
   },
   "sidebar.title": {
     "message": "All posts",
-    "description": "The label for the left sidebar"
+    "description": "All posts"
   }
 }
